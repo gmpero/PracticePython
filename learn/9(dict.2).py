@@ -7,5 +7,8 @@ for el in text.split():
        dictionary[el] = dictionary[el] + 1
     else:
         dictionary[el] = 1
+        
+# for word in text.split():
+#    dictionary[word] = dictionary.get(word, 0) + 1 // проверяем есть ли данный ключ в словаре, если нет то присваем туда 0 + 1 иначе + 1
 
 print(dictionary)
