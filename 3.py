@@ -106,13 +106,16 @@ colors = {"red", "blue", "ggg"}
 
 def in_rainbow(colors):
     rainbow = {"Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"}
-    count = 0
-    for el_rainbow in rainbow:
-        if el_rainbow in colors:
-            count += 1
-            if count == 7:
-                return "Yes"
+    if rainbow <= colors:
+        return "Yes"
     return "No"
 
 
 print(in_rainbow(colors))
+
+#6
+'''
+(Множества) Дан текст: в первой строке записано число строк, далее идут сами строки. Определите, сколько различных слов содержится в этом тексте. 
+Словом считается последовательность непробельных символов идущих подряд, слова разделены одним или большим числом пробелов или символами конца строки.
+'''
+
