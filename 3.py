@@ -83,3 +83,36 @@ print(CreateDict(key, value))
 '''
 (Множества) Даны два списка чисел. Найдите все числа, которые входят как в первый, так и во второй список и выведите их в порядке возрастания.
 '''
+
+num_1 = {1, 6, 9, 1, 2, 3, 4, 5, 6}
+num_2 = {9, 8, 7, 6, 5, 4, 3}
+
+my_set = set(num_1)
+list_result = []
+for el in my_set:
+    if el in num_2:
+        list_result.append(el)
+
+print(list_result)
+
+#5
+'''
+(Множества) Дано множество Colors, сдержащее набор цветов. 
+Напишите функцию in_rainbow(), проверяющую, все ли цвета из этого набора входят в палитру цветов радуги
+'''
+
+colors = {"red", "blue", "ggg"}
+
+
+def in_rainbow(colors):
+    rainbow = {"Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"}
+    count = 0
+    for el_rainbow in rainbow:
+        if el_rainbow in colors:
+            count += 1
+            if count == 7:
+                return "Yes"
+    return "No"
+
+
+print(in_rainbow(colors))
